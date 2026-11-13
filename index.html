@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css"> 
+    <title>Momentum App</title> 
+</head>
+ <body>
+   
+    <h1 id="greeting" class="hidden"></h1>
+    
+    <!-- 커피 룰렛 섹션 -->
+<!-- 커피 룰렛 섹션 -->
+ <div class="roulette-container">
+  <h2>☕ 오늘 커피 쏠 사람 룰렛</h2>
+  
+  <div class="roulette-wheel-box">
+    <div class="roulette-pointer">▼</div>
+    <canvas id="rouletteCanvas" width="300" height="300"></canvas>
+  </div>
+
+  <button id="spinBtn" class="spin-btn">돌리기!</button>
+  <p id="resultText" class="result-text"></p>
+
+  <!-- 친구 이름 추가 폼 -->
+  <form id="memberForm" class="member-form">
+    <input type="text" id="memberInput" placeholder="친구 이름 입력" required />
+    <button type="submit">추가</button>
+  </form>
+
+  <!-- 현재 참가자 목록 (클릭 시 삭제) -->
+  <ul id="memberList" class="member-list"></ul>
+
+  <!-- 명예의 전당 (DB 기록판) -->
+  <div class="history-box">
+    <h3>🏆 커피 쏜 기록 (명예의 전당)</h3>
+    <ul id="winnerHistoryList" class="history-list">
+      <li>기록 불러오는 중...</li>
+    </ul>
+  </div>
+  </div>
+  <script type="module" src="js/roulette.js"></script>
+  <!-- -------------------------------- -->
+
+  <div class="game-container">
+    <h3>💩 마우스로 똥 피하기 💩</h3>
+    <p>점수: <span id="gameScore">0</span>점</p>
+    <!-- 게임이 그려지는 도화지 역할 -->
+    <canvas id="gameCanvas" width="400" height="400"></canvas>
+    <br>
+    <button id="startGameBtn">게임 시작</button>
+  </div>
+  <script src="js/avoid.js"></script>     
+
+  <!-- -------------------------------- -->
+
+  <script src="js/greetings.js"></script> 
+  <script src="js/clock.js"></script> 
+  <script src="js/quotes.js"></script>
+  <script src="js/background.js"></script>     
+  <script src="js/todo.js"></script>     
+  
+
+ </body>
+</html>
+
